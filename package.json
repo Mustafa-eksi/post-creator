@@ -1,0 +1,20 @@
+{
+  "name": "post-creator",
+  "version": "1.0.0",
+  "description": "",
+  "private": "yes",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "mustafa",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "canvas-text-wrapper": "^0.10.2",
+    "justreddit": "^4.2.0"
+  }
+}
