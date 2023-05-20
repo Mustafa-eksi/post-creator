@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "canvas": "^2.11.2",
-    "canvas-text-wrapper": "^0.10.2",
+    "canvas-text-wrapper": "github:Mustafa-eksi/canvas-text-wrapper",
     "justreddit": "^4.2.0"
   }
 }
