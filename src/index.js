@@ -33,17 +33,17 @@ async function getRandomPost(subreddit) {
 
 function PutTextOnImage(url, text, options, imagePadding, textColor, gradientColor, gradient, gradiantStart) {
   var img = new Image();
-  img.onload = function() {
+  img.onload = async function() {
     ctx.canvas.height = img.height+imagePadding;
     ctx.canvas.width = img.width;
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(await createImageBitmap(img), 0, 0);
     if(gradient === true) {
       console.log(parseInt(ctx.canvas.height*(1-gradiantStart)), gradiantStart);
       const gradient = ctx.createLinearGradient(0, parseInt(ctx.canvas.height*(1-gradiantStart)), 0, ctx.canvas.height);
       gradient.addColorStop(0, 'transparent');     // Start color
       gradient.addColorStop(1, gradientColor);    // End color
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     }else {
       ctx.fillStyle = gradientColor;
       ctx.fillRect(0, img.height, canvas.width, canvas.height);
