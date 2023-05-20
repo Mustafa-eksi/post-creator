@@ -6,14 +6,19 @@
      <title>Post creator</title>
    </head>
    <body style="padding:10px;">
-     <div class="ikili">
+     <div id="ikili">
        <div class="mb-3">
          <div>
-           <div class="input-group mb-3" style="width: 500px;">
+           <div class="input-group mb-3">
              <span class="input-group-text">Subreddit girin:</span>
              <input type="text" id="subreddit" class="form-control">
-             <button class="btn btn-outline-secondary" type="button" id="git">Post oluştur</button>
+             <button class="btn btn-outline-secondary" type="button" id="git">Rastgele reddit postu bul</button>
            </div>
+           <!-- <div class="input-group mb-3"> -->
+           <!--   <span class="input-group-text">Youtube veya twitter linki:</span> -->
+           <!--   <input type="text" id="link" class="form-control"> -->
+           <!--   <button class="btn btn-outline-secondary" type="button" id="linkgit">Başlık ve resim çek</button> -->
+           <!-- </div> -->
          </div>
          <br/>
          <div class="mx-3">
@@ -56,6 +61,7 @@
             <input type="number" class="form-control" id="gradient-start">
           </div>
           <button type="button" class="btn btn-primary" id="yenile">Resmi tekrar oluştur</button>
+          <button class="btn btn-outline-secondary" type="button" id="indir">İndir</button>
          </div>
        </div>
        <canvas id="canvas" width="500" height="500"></canvas>
